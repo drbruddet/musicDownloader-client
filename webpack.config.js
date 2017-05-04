@@ -20,18 +20,24 @@ const config = {
     path: BUILD_DIR,
     filename: 'bundle.js'
   },
+  devServer: {
+    inline: true,
+    port: 8080
+  },
   module : {
     loaders : [
       {
         test : /\.jsx$/,
         include : APP_DIR,
         loader : 'babel-loader',
+        query: { presets: ['es2015', 'react'] },
         exclude: /node_modules/
       },
       {
         test : /\.js$/,
         include : APP_DIR,
         loader : 'babel-loader',
+        query: { presets: ['es2015', 'react'] },
         exclude: /node_modules/
       }
     ]
