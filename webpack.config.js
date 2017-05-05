@@ -1,7 +1,3 @@
-/*
-**   ./webpack.config.js
-*/
-
 const path = require('path')
 
 const BUILD_DIR = path.resolve(__dirname, 'src/public')
